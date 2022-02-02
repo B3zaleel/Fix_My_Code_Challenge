@@ -40,12 +40,16 @@
     + Convert the previous `width` attribute to a class property to prevent type and value pollution.
     + Make the [file](square.py) PEP8 compliant.
 
-+ [ ] 2. Step 2: User model
++ [x] 2. Step 2: User model
   + **INFO:**
     + I'm running into a serious problem!
     + I just start my OOP project and nothing works…
     + Could you help me please? My code is [here](user.py).
     + Thank you!
+  + **ISSUE:**
+    + There was a name definition error because a class property was being accessed before it was defined.
+  + **FIX:**
+    + Move the definition of the `email` class property to appear before its setter.
 
 + [ ] 3. Blog access
   + **INFO:**

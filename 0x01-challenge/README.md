@@ -2,7 +2,7 @@
 
 ## Tasks To Complete
 
-+ [ ] 0. Server status
++ [x] 0. Server status
   + **INFO:**
     + I just started a new Flask project and the first thing I'm putting in place is a route for the status of my API (super important for a load balancer implementation).
     + But I don't know why it's not working…
@@ -22,6 +22,10 @@
         }
         $
         ```
+  + **ISSUE:**
+    + The Flask API project had a routing issue. The `app_views` blueprint [here](status_server/api/v1/views/__init__.py) specified the `url_prefix` as `/api/v1`. However, the `status` route handler defined [here](status_server/api/v1/views/index.py) specified the rule as `/api/v1/status`. The `url_prefix` for a blueprint is added to the left side of each route defined under the current blueprint. This means that the route for the path would have to be gotten through `curl -XGET http://0.0.0.0:5000/api/v1/api/v1/status` rather than `curl -XGET http://0.0.0.0:5000/api/v1/status`.
+  + **FIX:**
+    + Change the rule for the `status` route handler in [here](status_server/api/v1/views/index.py) from `/api/v1/status` to `/status`.
 
 + [ ] 1. My square
   + **INFO:**

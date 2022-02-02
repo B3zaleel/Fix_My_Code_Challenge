@@ -27,10 +27,18 @@
   + **FIX:**
     + Change the rule for the `status` route handler in [here](status_server/api/v1/views/index.py) from `/api/v1/status` to `/status`.
 
-+ [ ] 1. My square
++ [x] 1. My square
   + **INFO:**
     + I love geometry!
     + Look [my square](square.py), it's perfect? No? Should I change something?
+  + **ISSUE:**
+    + The perimeter and string format of the `square` class were incorrectly defined. There were also some typos and styling issues such as inconsistent naming format, no documentation on the module, class, and some functions.
+  + **FIX:**
+    + Change the perimeter to be 4 times the `width`.
+    + Change the string format to be the `width/width` rather than `width/height`.
+    + Remove the unused class variable `height` and change `width` to `__width`.
+    + Convert the previous `width` attribute to a class property to prevent type and value pollution.
+    + Make the [file](square.py) PEP8 compliant.
 
 + [ ] 2. Step 2: User model
   + **INFO:**

@@ -1,6 +1,6 @@
 # Fix-my-code-1
 
-## Tasks To Complete
+## Issues To Resolve
 
 + [x] 0. Server status
   + **INFO:**

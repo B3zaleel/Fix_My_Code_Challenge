@@ -59,7 +59,7 @@
     + I would like to add a boolean `online` for each `Post` object with a default value `true`. With this boolean, I will be able to hide/show some blog posts from the listing. I will also need a way to change this boolean in the `Post#edit` route. Could you do this for me?
     + Thank you!
 
-+ [ ] 4. Never leave the office
++ [x] 4. Never leave the office
   + **INFO:**
     + I'm coming back from 2 weeks of holidays in France and when I arrived at the office, the first words from my marketing co-worker were: "Hi, how was your holiday? by the way, I think I broke the website…"
     + **WHAT???**

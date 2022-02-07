@@ -13,9 +13,9 @@ var Header = React.createClass({
     render : function() {
         return (
             <Navbar>
-                <NavBrand>Link to={`/`}>React Blog</Link></NavBrand>
+                <NavBrand><Link to={`/`}>React Blog</Link></NavBrand>
             </Navbar>
-            
+
         )
     }
 });

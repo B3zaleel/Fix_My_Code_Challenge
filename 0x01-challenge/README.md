@@ -65,3 +65,13 @@
     + **WHAT???**
     + Ok, let's jump on it and fix [it](react-blog/)!
     + Arf, I have also the pagination to fix… I didn't have time before my break to look at it…
+  + **ISSUE:**
+    + When building the application using `gulp build-all`, it fails as a result of an error in the jsx file at [react-blog/src/components/Header.jsx](react-blog/src/components/Header.jsx) and a missing `prop-types` dependency.
+    + There was a `const` variable used in a for loop in [react-blog/src/actions/SinglePostActions.js](react-blog/src/actions/SinglePostActions.js).
+    + There were a lot of typos in [react-blog/src/actions/AllPostActions.js](react-blog/src/actions/AllPostActions.js).
+    + There was a semantic error with the string concatenation in the render function in [react-blog/src/components/PostPreview.jsx](react-blog/src/components/PostPreview.jsx).
+  + **FIX:**
+    + I added the missing `<` symbol in the jsx file and I installed the `prop-types` module.
+    + I changed the `const` variable in the for loop in [react-blog/src/actions/SinglePostActions.js](react-blog/src/actions/SinglePostActions.js) to a `let` variable.
+    + I fixed the typos in [react-blog/src/actions/AllPostActions.js](react-blog/src/actions/AllPostActions.js).
+    + I fixed the semantic error with the string concatenation in the render function in [react-blog/src/components/PostPreview.jsx](react-blog/src/components/PostPreview.jsx).

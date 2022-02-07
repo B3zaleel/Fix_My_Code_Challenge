@@ -22,10 +22,10 @@ class SinglePostActions {
             }
 
             request.get(config.baseUrl+'/ajax/post/'+id,function(err,response){
-                var post = response.body;
+                var post = (response || {body: {}}).body;
                 var includes = post.includes || [], loadedIncludes = [];
                 var includeNum  = includes.length;
-                
+
                 var finish = function() {
                     self.actions.updateCurrentPost(post);
                     self.actions.updateIncludes(loadedIncludes);
@@ -63,18 +63,18 @@ class SinglePostActions {
                 } else {
                     finish();
                 }
-            });   
+            });
         }
     }
 
     updateCurrentPost(post){
         this.dispatch(post);
     }
-    
+
     updateIncludes(includes) {
         this.dispatch(includes);
     }
-    
+
     reset() {
         this.dispatch();
     }

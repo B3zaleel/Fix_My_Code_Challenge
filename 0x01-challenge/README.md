@@ -58,6 +58,13 @@
     + Also, when you're done, could you add a new feature please?
     + I would like to add a boolean `online` for each `Post` object with a default value `true`. With this boolean, I will be able to hide/show some blog posts from the listing. I will also need a way to change this boolean in the `Post#edit` route. Could you do this for me?
     + Thank you!
+  + **ISSUE:**
+    + All the requirements to make the server run weren't listed on the README. The developer could have had all those programs and libraries on his computer, so the web application wouldn't work on another person's computer if that person doesn't have those programs and libraries.
+    + The bcrypt gem was raising Exceptions whenever I tried to login as an admin or create a new user.
+  + **FIX:**
+    + In the README, I declared all the programs and libraries that should be on the user's computer for the web application to work. I also declared the version of Ruby which successfully runs the program, which was Ruby 2.3.
+    + I upgraded the version of the bcrypt gem that was in the [Gemfile.lock](blog/Gemfile.lock) and executed `bundle install` again.
+    + I generated a migration Ruby script for adding the `online` boolean column for each `Post` using the command `rails generate migration AddOnlineToPosts online:boolean`. I later edited the file to support the requested feature.
 
 + [x] 4. Never leave the office
   + **INFO:**

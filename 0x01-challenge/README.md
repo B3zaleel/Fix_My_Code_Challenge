@@ -51,7 +51,7 @@
   + **FIX:**
     + Move the definition of the `email` class property to appear before its setter.
 
-+ [ ] 3. Blog access
++ [x] 3. Blog access
   + **INFO:**
     + I finished and deployed my Rails blog but people are contacting me because they can't access any of my blog posts… Weird, it works for me…
     + Could you take a look and fix it? My code base is [here](blog/).

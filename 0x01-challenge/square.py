@@ -27,11 +27,11 @@ class Square:
         else:
             raise TypeError("Type must be an int or a float.")
 
-    def area(self):
+    def area_of_my_square(self):
         """ Computes the area of this square. """
         return self.width * self.width
 
-    def perimeter(self):
+    def perimeter_of_my_square(self):
         """ Computes the perimeter of this square. """
         return (self.width * 4)
 
@@ -43,5 +43,5 @@ class Square:
 if __name__ == "__main__":
     s = Square(width=12, height=9)
     print(s)
-    print(s.area())
-    print(s.perimeter())
+    print(s.area_of_my_square())
+    print(s.perimeter_of_my_square())

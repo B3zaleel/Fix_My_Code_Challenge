@@ -2,7 +2,7 @@
 """ A module for handling squares. """
 
 
-class Square:
+class square:
     """Represents a rectangle with equal sides."""
     __width = 0
 
@@ -41,7 +41,7 @@ class Square:
 
 
 if __name__ == "__main__":
-    s = Square(width=12, height=9)
+    s = square(width=12, height=9)
     print(s)
     print(s.area())
     print(s.perimeter())

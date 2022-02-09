@@ -5,6 +5,7 @@
 class Square:
     """Represents a rectangle with equal sides."""
     width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
         """ Initializes a new square. """
@@ -33,11 +34,11 @@ class Square:
 
     def perimeter_of_my_square(self):
         """ Computes the perimeter of this square. """
-        return (self.width * 4)
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """ Computes the string format of this square. """
-        return "{}/{}".format(self.width, self.width)
+        return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":

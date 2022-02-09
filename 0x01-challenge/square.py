@@ -4,28 +4,28 @@
 
 class Square:
     """Represents a rectangle with equal sides."""
-    __width = 0
+    width = 0
 
     def __init__(self, *args, **kwargs):
         """ Initializes a new square. """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    @property
-    def width(self):
-        """ Gets the width of this square. """
-        return self.__width
+    # @property
+    # def width(self):
+    #     """ Gets the width of this square. """
+    #     return self.__width
 
-    @width.setter
-    def width(self, value):
-        """ Sets the width of this square. """
-        if type(value) is int or type(value) is float:
-            if value < 0:
-                raise ValueError("Value must be >= 0.")
-            else:
-                self.__width = value
-        else:
-            raise TypeError("Type must be an int or a float.")
+    # @width.setter
+    # def width(self, value):
+    #     """ Sets the width of this square. """
+    #     if type(value) is int or type(value) is float:
+    #         if value < 0:
+    #             raise ValueError("Value must be >= 0.")
+    #         else:
+    #             self.__width = value
+    #     else:
+    #         raise TypeError("Type must be an int or a float.")
 
     def area_of_my_square(self):
         """ Computes the area of this square. """

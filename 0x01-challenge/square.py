@@ -2,21 +2,36 @@
 """ A module for handling squares. """
 
 
-class square:
-    """ Represents a rectangle with equal sides. """
-    width = 0
-    height = 0
+class Square:
+    """Represents a rectangle with equal sides."""
+    __width = 0
 
     def __init__(self, *args, **kwargs):
         """ Initializes a new square. """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    def area_of_my_square(self):
+    @property
+    def width(self):
+        """ Gets the width of this square. """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """ Sets the width of this square. """
+        if type(value) is int or type(value) is float:
+            if value < 0:
+                raise ValueError("Value must be >= 0.")
+            else:
+                self.__width = value
+        else:
+            raise TypeError("Type must be an int or a float.")
+
+    def area(self):
         """ Computes the area of this square. """
         return self.width * self.width
 
-    def PermiterOfMySquare(self):
+    def perimeter(self):
         """ Computes the perimeter of this square. """
         return (self.width * 4)
 
@@ -26,7 +41,7 @@ class square:
 
 
 if __name__ == "__main__":
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
-    print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.area())
+    print(s.perimeter())

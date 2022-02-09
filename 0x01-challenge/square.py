@@ -5,11 +5,16 @@
 class Square:
     """Represents a rectangle with equal sides."""
     width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
         """ Initializes a new square. """
         for key, value in kwargs.items():
             setattr(self, key, value)
+            if key == 'height':
+                setattr(self, 'width', value)
+            if key == 'width':
+                setattr(self, 'height', value)
 
     def area_of_my_square(self):
         """ Computes the area of this square. """

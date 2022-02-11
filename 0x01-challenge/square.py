@@ -22,7 +22,7 @@ class Square:
 
     def permiter_of_my_square(self):
         """ Computes the perimeter of this square. """
-        return (self.width * 2) + (self.width * 2)
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """ Computes the string format of this square. """

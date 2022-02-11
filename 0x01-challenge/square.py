@@ -20,7 +20,7 @@ class Square:
         """ Computes the area of this square. """
         return self.width ** 2
 
-    def perimeter_of_my_square(self):
+    def permiter_of_my_square(self):
         """ Computes the perimeter of this square. """
         return (self.width * 2) + (self.width * 2)
 
@@ -29,8 +29,8 @@ class Square:
         return "{}/{}".format(self.width, self.width)
 
 
-if __name__ == "__main__":
-    s = Square(width=12)
-    print(s)
-    print(s.area_of_my_square())
-    print(s.perimeter_of_my_square())
+# if __name__ == "__main__":
+#     s = Square(width=12)
+#     print(s)
+#     print(s.area_of_my_square())
+#     print(s.permiter_of_my_square())

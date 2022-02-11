@@ -18,7 +18,7 @@ class Square:
 
     def area_of_my_square(self):
         """ Computes the area of this square. """
-        return self.width ** 2
+        return self.width * self.height
 
     def permiter_of_my_square(self):
         """ Computes the perimeter of this square. """
